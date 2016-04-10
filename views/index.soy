@@ -1,0 +1,24 @@
+{namespace index}
+ 
+/**
+ * @param title
+ * @param comments
+ */
+{template .home}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{$title}</title>
+  </head>
+  <body>
+    <h1>{$title}</h1>
+
+    {call .userslist data="all" /}
+
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/javascripts/rating/rating.css' />
+    <script src="/javascripts/rating/rating-min.js"></script>
+  </body>
+</html>
+{/template}
