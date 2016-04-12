@@ -19,13 +19,16 @@ var routes = require('./routes');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'modules'));
 app.set('view engine', '.soy');
 
 var soyRenderer = function(_path, options, callback) {
     var templatePath = _path.replace(path.normalize(this.root + '/'), '');
+    console.log(templatePath);
     templatePath = templatePath.replace('.soy',path.sep + options['function']);
+    console.log(templatePath);
     templatePath = templatePath.split(path.sep).join('.');
+    console.log(templatePath);
     callback(null, options.soynode.render(templatePath, options));
 };
 
@@ -52,7 +55,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-soynode.compileTemplates('views', function(err) {
+soynode.compileTemplates('modules', function(err) {
     if (err) throw err;
 });
 

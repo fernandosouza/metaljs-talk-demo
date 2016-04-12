@@ -1,0 +1,30 @@
+{
+	"name": "metal-users-rating",
+	"version": "0.0.0",
+	"description": "My awesome Metal.js project",
+	"license": "BSD",
+	"repository": "fernandosouza/metal-users-rating",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "src/Users-rating.js",
+	"files": [
+		"src",
+		"test"
+	],
+	"scripts": {
+		"test": "gulp test"
+	},
+	"keywords": [
+		"metal"
+	],
+	"dependencies": {
+		"metal-component": "1.0.0-rc.3",
+		"metal-soy": "1.0.0-rc.5"
+	},
+	"devDependencies": {
+		"gulp": "^3.8.11",
+		"gulp-metal": "^1.0.0"
+	}
+}

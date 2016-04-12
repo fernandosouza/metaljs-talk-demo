@@ -1,10 +1,9 @@
-{namespace index}
+{namespace users}
  
 /**
  * @param title
- * @param comments
  */
-{template .home}
+{template .list}
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,12 +12,12 @@
   <body>
     <h1>{$title}</h1>
 
-    {call .userslist data="all" /}
-
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/javascripts/rating/rating.css' />
-    <script src="/javascripts/rating/rating-min.js"></script>
+    <script src="javascripts/metal-users-rating/UsersRating.js"></script>
+    <script type="text/javascript">
+    	// new metal.UsersRating(comments).render();
+    </script>
   </body>
 </html>
 {/template}

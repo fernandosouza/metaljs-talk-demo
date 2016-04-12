@@ -1,0 +1,47 @@
+{delpackage UsersRating}
+{namespace index}
+ 
+/**
+ * @param title
+ * @param data
+ * @param dataStringify
+ */
+{template .home}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{$title}</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>{$title}</h1>
+
+    <div class="usercomments">
+      {call UsersRating.render}
+        {param comments: $data.comments /}
+      {/call}
+    </div>
+
+    <script src="{call .rating_url /}"></script>
+    <script type="text/javascript">
+    {call .render_js}
+      {param comments: $dataStringify.comments /}
+    {/call}
+    </script>
+  </body>
+</html>
+{/template}
+
+/**
+ * @param comments
+ */
+{template .render_js kind="js"}
+    new metal.UsersRating({$comments});
+{/template}
+
+/**
+ */
+{template .rating_url kind="uri"}
+  javascripts/metal-users-rating/UsersRating.js
+{/template}

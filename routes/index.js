@@ -8,9 +8,14 @@ exports.index = function(req, res){
   res.render(
     'index',
     {
-      'function': 'home',
-      title: 'Users Comment',
-      comments: usersData.usersComments
+      "function": 'home',
+      "title": 'Home',
+      "data": {
+        "comments": usersData.usersComments,
+      },
+      "dataStringify": {
+        "comments": JSON.stringify(usersData.usersComments)
+      }
     }
   );
 };
