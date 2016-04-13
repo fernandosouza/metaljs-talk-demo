@@ -11262,7 +11262,7 @@ babelHelpers;
       ie_close('h2');
       var commentLimit6 = opt_data.comments.length;
       for (var comment6 = 0; comment6 < commentLimit6; comment6++) {
-        ie_open('div', null, null, 'class', 'panel panel-default');
+        ie_open('div', null, null, 'class', 'panel panel-default', 'data-onmouseenter', 'hey');
         ie_open('div', null, null, 'class', 'panel-heading');
         ie_open('h3', null, null, 'class', 'panel-title');
         itext((goog.asserts.assert(opt_data.comments[comment6].name != null), opt_data.comments[comment6].name));
@@ -11383,12 +11383,14 @@ babelHelpers;
 		function UsersRating(opt_config) {
 			babelHelpers.classCallCheck(this, UsersRating);
 
-			var comments = {
-				comments: JSON.parse(opt_config)
-			};
+			opt_config.comments = JSON.parse(opt_config.comments);
 
-			return babelHelpers.possibleConstructorReturn(this, _Component.call(this, comments));
+			return babelHelpers.possibleConstructorReturn(this, _Component.call(this, opt_config));
 		}
+
+		UsersRating.prototype.hey = function hey() {
+			console.log('Hey danado');
+		};
 
 		return UsersRating;
 	}(Component);

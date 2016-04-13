@@ -48,7 +48,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     var commentLimit6 = opt_data.comments.length;
     for (var comment6 = 0; comment6 < commentLimit6; comment6++) {
       ie_open('div', null, null,
-          'class', 'panel panel-default');
+          'class', 'panel panel-default',
+          'data-onmouseenter', 'hey');
         ie_open('div', null, null,
             'class', 'panel-heading');
           ie_open('h3', null, null,

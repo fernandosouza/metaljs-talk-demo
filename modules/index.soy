@@ -37,7 +37,16 @@
  * @param comments
  */
 {template .render_js kind="js"}
-    new metal.UsersRating({$comments});
+    var comments = {$comments};
+
+    {literal}
+    var config = {
+      element: ".usercomments .users-rating",
+      comments: comments
+    };
+    {/literal}
+
+    new metal.UsersRating(config);
 {/template}
 
 /**
