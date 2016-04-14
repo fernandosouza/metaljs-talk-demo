@@ -23,7 +23,9 @@
       {/call}
     </div>
 
-    <script src="{call .rating_url /}"></script>
+    {literal}
+    <script src="javascripts/bundle.js"></script>
+    {/literal}
     <script type="text/javascript">
     {call .render_js}
       {param comments: $dataStringify.comments /}
@@ -42,15 +44,9 @@
     {literal}
     var config = {
       element: ".usercomments .users-rating",
-      comments: comments
+      comments: JSON.parse(comments)
     };
-    {/literal}
 
     new metal.UsersRating(config);
-{/template}
-
-/**
- */
-{template .rating_url kind="uri"}
-  javascripts/metal-users-rating/UsersRating.js
+    {/literal}
 {/template}

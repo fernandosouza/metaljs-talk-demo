@@ -59,6 +59,10 @@ soynode.compileTemplates('modules', function(err) {
     if (err) throw err;
 });
 
+soynode.compileTemplates('modules', function(err) {
+    if (err) throw err;
+});
+
 // error handlers
 
 // development error handler

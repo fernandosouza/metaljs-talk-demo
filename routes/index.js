@@ -11,7 +11,7 @@ exports.index = function(req, res){
       "function": 'home',
       "title": 'Home',
       "data": {
-        "comments": usersData.usersComments,
+        "comments": usersData.usersComments
       },
       "dataStringify": {
         "comments": JSON.stringify(usersData.usersComments)

@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+.rating .rating-item {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.rate-label {
+  margin-right: 5px;
+  float: left;
+}
