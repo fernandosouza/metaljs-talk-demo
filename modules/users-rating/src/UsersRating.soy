@@ -13,6 +13,16 @@
             <div class="panel panel-default" data-onmouseenter="hey">
               <div class="panel-heading">
 
+                {call Rating.render}
+                  {param options: $comments[$comment].options /}
+                  {param inputHiddenName: $comments[$comment].inputHiddenName /}
+                  {param disabled: $comments[$comment].disabled /}
+                  {param cssClasses: $comments[$comment].cssClasses /}
+                  {param canReset: $comments[$comment].canReset /}
+                  {param value: $comments[$comment].value /}
+                  {param label: $comments[$comment].label /}
+                {/call}
+
                 <h3 class="panel-title">
                   { $comments[$comment].name } 
 
